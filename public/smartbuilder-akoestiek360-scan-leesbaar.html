@@ -1,0 +1,324 @@
+<!-- Upload deze bestanden en vervang src door de mediabibliotheek-URL:
+scan-op-locatie.jpg
+akoestische-camera.jpg
+akoestiek360-meten.gif
+akoestiek360-analyseren.gif
+akoestiek360-rapport.gif -->
+<!-- SEO-titel: Akoestiek360 Scan | Volledige akoestiekanalyse -->
+<!-- SEO-omschrijving: De Akoestiek360 Scan meet nagalm, spraakverstaanbaarheid, geluidslekkage en luchtgeluid. Klasse 1-apparatuur, een helder rapport en eerlijk advies. -->
+<div class="a360s">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700&family=Oswald:wght@400;500&display=swap" />
+<style>
+  .a360s, .a360s *, .a360s *::before, .a360s *::after { box-sizing: border-box; }
+  .a360s { container-type: inline-size; width: 100%; color: #0a0a0a; font-family: Merriweather, Georgia, serif; line-height: 1.5; }
+  .a360s h1, .a360s h2, .a360s h3, .a360s p, .a360s ul, .a360s li, .a360s figure { margin: 0; padding: 0; }
+  .a360s ul { list-style: none; }
+  .a360s img { display: block; max-width: 100%; height: auto; border: 0; }
+  .a360s-panel {
+    background: #fcfcfc;
+    border: 1px solid #cfe3e6;
+    padding: clamp(1.25rem, 3cqw, 2.6rem) clamp(1.15rem, 3.2cqw, 2.7rem) clamp(1.3rem, 2.8cqw, 2.2rem);
+  }
+  .a360s-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: clamp(1.2rem, 3cqw, 2.4rem);
+    align-items: center;
+  }
+  .a360s-kicker {
+    color: #006878 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .a360s h1 {
+    max-width: 11em;
+    margin-top: 0.4rem;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: clamp(2.1rem, 5cqw, 3.5rem) !important;
+    letter-spacing: -0.02em;
+    line-height: 0.96 !important;
+  }
+  .a360s h1 em { font-style: normal; color: #007e90 !important; }
+  .a360s-rule {
+    display: block;
+    width: min(28rem, 86%);
+    height: 2px;
+    margin: 1.05rem 0 1.1rem;
+    background: #00a8b0;
+    transform-origin: left center;
+    animation: a360s-draw 2.8s cubic-bezier(0.22, 0.61, 0.18, 1) both;
+  }
+  .a360s-lead {
+    max-width: 38em;
+    color: #3e5568 !important;
+    font-size: clamp(0.95rem, 1.3cqw, 1.08rem) !important;
+    line-height: 1.6;
+  }
+  .a360s-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.1rem; margin-top: 1.25rem; }
+  .a360s-cta {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.7rem;
+    padding: 0 1.05rem !important;
+    background: #003060 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em;
+    text-decoration: none !important;
+    text-transform: uppercase;
+  }
+  .a360s-cta:hover { background: #00a8b0 !important; color: #ffffff !important; }
+  .a360s-cta svg { width: 0.95rem; height: 0.95rem; }
+  .a360s-aside { color: #3e5568 !important; font-size: 0.82rem; }
+  .a360s-aside a { color: #006878; }
+  .a360s-photo { position: relative; margin: 0; background: #ffffff; border: 1px solid #d3e6e8; }
+  .a360s-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 20%; }
+  .a360s-photo figcaption {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.6rem 0.75rem 0.7rem;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .a360s-photo figcaption span { color: #006878 !important; letter-spacing: 0.12em; }
+  .a360s-camera {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(1rem, 2.6cqw, 1.8rem);
+    align-items: center;
+    margin-top: clamp(1.6rem, 3.5cqw, 2.4rem);
+  }
+  .a360s-camera figure { margin: 0; background: #ffffff; border: 1px solid #d3e6e8; }
+  .a360s-camera img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .a360s-camera figcaption {
+    padding: 0.55rem 0.75rem 0.65rem;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .a360s-camera h2 { margin: 0; }
+  .a360s-camera p { margin-top: 0.6rem !important; color: #3e5568 !important; font-size: 0.95rem !important; line-height: 1.6; }
+  .a360s-block { margin-top: clamp(1.6rem, 3.5cqw, 2.4rem); }
+  .a360s h2 {
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: clamp(1.45rem, 2.6cqw, 2rem) !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.02em;
+    line-height: 1.1 !important;
+  }
+  .a360s-intro {
+    max-width: 42em;
+    margin-top: 0.55rem !important;
+    color: #3e5568 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+  }
+  .a360s-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.1rem;
+  }
+  .a360s-facts li {
+    min-width: 0;
+    padding: 0.9rem 0.95rem 1rem;
+    background: #ffffff;
+    border: 1px solid #d3e6e8;
+    border-top: 3px solid #00a8b0;
+  }
+  .a360s-facts strong {
+    display: block;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .a360s-facts span { display: block; margin-top: 0.28rem; color: #3e5568 !important; font-size: 0.86rem; line-height: 1.45; }
+  .a360s-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.1rem;
+  }
+  .a360s-steps article { min-width: 0; background: #ffffff; border: 1px solid #d3e6e8; }
+  .a360s-steps img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #ffffff; }
+  .a360s-steps div { padding: 0.75rem 0.85rem 0.95rem; }
+  .a360s-num {
+    color: #00a8b0 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+  }
+  .a360s-steps h3 {
+    margin-top: 0.2rem;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+  }
+  .a360s-steps p { margin-top: 0.35rem !important; color: #3e5568 !important; font-size: 0.86rem !important; line-height: 1.5; }
+  .a360s-who { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.1rem; }
+  .a360s-who article { padding: 1rem 1rem 1.05rem; background: #ffffff; border: 1px solid #d3e6e8; }
+  .a360s-who h3 {
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+  }
+  .a360s-who p { margin-top: 0.4rem !important; color: #3e5568 !important; font-size: 0.88rem !important; line-height: 1.55; }
+  .a360s-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.9rem 1.4rem;
+    margin-top: 1.35rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid #d3e6e8;
+  }
+  .a360s-close {
+    max-width: 22em;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: clamp(1.2rem, 2cqw, 1.55rem);
+    font-weight: 500;
+    line-height: 1.15;
+  }
+  .a360s-close span {
+    display: block;
+    margin-top: 0.3rem;
+    color: #3e5568 !important;
+    font-family: Merriweather, Georgia, serif !important;
+    font-size: 0.86rem;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+  @keyframes a360s-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @container (max-width: 800px) {
+    .a360s-hero, .a360s-facts, .a360s-steps, .a360s-who, .a360s-camera { grid-template-columns: 1fr; }
+    .a360s-photo img { aspect-ratio: 4 / 5; max-height: 520px; object-fit: cover; }
+    .a360s-photo figcaption { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+    .a360s h1 { font-size: 2.25rem !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .a360s-rule { animation: none !important; }
+  }
+</style>
+<section class="a360s-panel" aria-label="De Akoestiek360 Scan">
+  <div class="a360s-hero">
+    <div>
+      <p class="a360s-kicker">Volledige akoestiekanalyse</p>
+      <h1>De Akoestiek360 Scan. <em>Eerst inzicht. Dan de juiste oplossing.</em></h1>
+      <span class="a360s-rule" aria-hidden="true"></span>
+      <p class="a360s-lead">Een ruimte kan er prachtig uitzien en toch niet prettig klinken. Hinderlijke nagalm, gesprekken die moeilijk te volgen zijn, of geluid uit de ruimte ernaast. De Akoestiek360 Scan brengt dat totaalbeeld in kaart: meten, analyseren en een helder rapport met eerlijk, onderbouwd advies.</p>
+      <div class="a360s-actions">
+        <a class="a360s-cta" href="https://akoestiek360.nl/contact/">Neem contact op
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <p class="a360s-aside">Of plan direct via <a href="https://akoestiekscan.nl">akoestiekscan.nl</a></p>
+      </div>
+    </div>
+    <figure class="a360s-photo">
+      <img src="scan-op-locatie.jpg" alt="Akoestiek360 Scan meet de akoestiek van een kantoor met een geluidsmeter" width="1086" height="1448" />
+      <figcaption>Meten op locatie <span>Meten · analyseren · verbeteren</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="a360s-block">
+    <h2>Wat de scan in beeld brengt</h2>
+    <p class="a360s-intro">De naam 360 staat voor het totaalbeeld. Niet alleen hoe geluid zich in een ruimte gedraagt, ook hoe het tussen ruimtes overgaat. Afhankelijk van de vraag geeft de scan inzicht in:</p>
+    <ul class="a360s-facts">
+      <li><strong>Nagalm</strong><span>Blijft geluid te lang in de ruimte hangen?</span></li>
+      <li><strong>Spraakverstaanbaarheid</strong><span>Zijn gesprekken en presentaties goed te volgen?</span></li>
+      <li><strong>Geluidslekkages</strong><span>Waar en hoe dringt geluid ongewenst door?</span></li>
+      <li><strong>Luchtgeluidisolatie</strong><span>In hoeverre houden scheidingswanden geluid tegen?</span></li>
+    </ul>
+  </div>
+
+  <div class="a360s-camera">
+    <figure>
+      <img src="akoestische-camera.jpg" alt="Akoestische camera brengt een geluidslekkage in beeld als warmtebeeld op een plattegrond" width="1500" height="1000" />
+      <figcaption>Geluidslekkage in beeld</figcaption>
+    </figure>
+    <div>
+      <h2>Akoestische camera</h2>
+      <p>Een geluidslek zit vaak in een kier, een leidingdoorvoer of een aansluiting die je niet ziet. Met een akoestische camera brengen we geluid en geluidslekkages letterlijk in beeld. De opname laat zien waar het geluid vandaan komt en langs welke route het de ruimte binnenkomt.</p>
+      <p>Zo wordt duidelijk welke wand, naad of installatie het probleem veroorzaakt. De meting met klasse 1-apparatuur geeft de cijfers. De camera wijst de plek aan.</p>
+    </div>
+  </div>
+
+  <div class="a360s-block">
+    <h2>Van meten naar verbeteren</h2>
+    <p class="a360s-intro">De scan is meer dan een meting. Het is de basis om gericht te beslissen, zonder maatregelen die het probleem niet oplossen.</p>
+    <div class="a360s-steps">
+      <article>
+        <img src="akoestiek360-meten.gif" alt="Geluidsmeter voor een akoestische meting" width="560" height="560" />
+        <div>
+          <p class="a360s-num">01</p>
+          <h3>Scannen</h3>
+          <p>De relevante eigenschappen van de ruimte, met klasse 1-apparatuur en een akoestische camera. Het probleem komt letterlijk in beeld.</p>
+        </div>
+      </article>
+      <article>
+        <img src="akoestiek360-analyseren.gif" alt="Analyse van een akoestische meting" width="560" height="560" />
+        <div>
+          <p class="a360s-num">02</p>
+          <h3>Analyseren</h3>
+          <p>Welke problemen spelen, waar de oorzaak ligt en welke verbetering nodig is.</p>
+        </div>
+      </article>
+      <article>
+        <img src="akoestiek360-rapport.gif" alt="Rapport met advies over de akoestiek" width="560" height="560" />
+        <div>
+          <p class="a360s-num">03</p>
+          <h3>Adviseren</h3>
+          <p>Een overzichtelijk rapport met concrete aanbevelingen en de onderbouwing waarom die passen.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="a360s-block">
+    <h2>Voor gebruikers en professionals</h2>
+    <div class="a360s-who">
+      <article>
+        <h3>Eindgebruikers</h3>
+        <p>Duidelijkheid over de oorzaak van geluidsproblemen in kantoor, school, horeca of woning, en wat je eraan kunt doen.</p>
+      </article>
+      <article>
+        <h3>Kantoor- en projectinrichters</h3>
+        <p>Meetresultaten waarmee je akoestiek aantoonbaar meeneemt in ontwerp, advies en realisatie. Zo licht je keuzes toe aan de opdrachtgever.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="a360s-foot">
+    <p class="a360s-close">Weet wat er speelt. Kies wat werkt.<span>Akoestiek360, het totaalbeeld van akoestiek. Meer over <a href="https://akoestiek360.nl/nagalmmeting/">nagalmmeting</a> en <a href="https://akoestiek360.nl/luchtgeluidsmeting/">luchtgeluid</a>.</span></p>
+    <a class="a360s-cta" href="https://akoestiek360.nl/contact/">Plan een scan
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+  </div>
+</section>
+</div>

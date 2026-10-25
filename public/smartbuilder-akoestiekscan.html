@@ -1,0 +1,409 @@
+<div class="a360p">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;600&display=swap" />
+<style>
+  .a360p, .a360p *, .a360p *::before, .a360p *::after { box-sizing: border-box; }
+  .a360p { container-type: inline-size; display: grid; width: 100%; color: #0a0a0a; font-family: Merriweather, Georgia, serif; line-height: 1.45; }
+  .a360p::before { content: ""; grid-area: 1 / 1; width: 100%; aspect-ratio: 16 / 10; }
+  .a360p h1, .a360p p, .a360p ol, .a360p ul, .a360p dl, .a360p dd, .a360p figure { margin: 0; padding: 0; }
+  .a360p ol { list-style: none; }
+  .a360p a { text-decoration: none; }
+  .a360p button { font-family: inherit; }
+  .a360p-post {
+    display: grid;
+    grid-template-columns: minmax(0, 1.14fr) minmax(0, 0.86fr);
+    grid-area: 1 / 1;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    overflow: hidden;
+    background: #fcfcfc;
+    border: 1px solid #cfe3e6;
+    color: #0a0a0a;
+  }
+  .a360p-copy {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: clamp(0.9rem, 2.3cqw, 2.1rem) clamp(1rem, 2.6cqw, 2.3rem);
+  }
+  .a360p-brand { display: flex; align-items: center; gap: 0.7rem; }
+  .a360p-mark { width: 2.6rem; height: 2.6rem; flex: none; }
+  .a360p-word {
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-weight: 500;
+    font-size: clamp(1.15rem, 2cqw, 1.7rem);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: #003060 !important;
+  }
+  .a360p-word span { color: #00a8b0 !important; }
+  .a360p-tag {
+    margin-top: 0.18rem;
+    color: #3e5568 !important;
+    font-family: Merriweather, Georgia, serif !important;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  .a360p-kicker {
+    margin-top: clamp(0.7rem, 1.5cqw, 1.15rem);
+    color: #006878 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .a360p-title {
+    margin-top: 0.35rem;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: clamp(1.85rem, 4.3cqw, 3.55rem) !important;
+    letter-spacing: -0.02em;
+    line-height: 0.96 !important;
+  }
+  .a360p-title em, .a360p-title span { display: block; font-style: normal; font-weight: 500; }
+  .a360p-title em { color: #007e90 !important; }
+  .a360p p.a360p-deck {
+    max-width: 38em;
+    margin-top: 1.25rem !important;
+    color: #3e5568 !important;
+    font-size: clamp(0.84rem, 1.15cqw, 1.02rem) !important;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .a360p-lower { display: flex; flex-direction: column; flex: 1 0 auto; }
+  .a360p ol.a360p-aud { margin-top: 0.95rem !important; padding-top: 0; }
+  .a360p-aud li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.15rem 0.75rem;
+    align-items: baseline;
+    padding: 0.26rem 0;
+    border-top: 1px solid #d3e6e8;
+  }
+  .a360p-aud li:last-child { border-bottom: 1px solid #d3e6e8; }
+  .a360p-idx {
+    color: #007e90 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+  .a360p-who { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.1rem 0.8rem; }
+  .a360p-who strong {
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: clamp(0.92rem, 1.15cqw, 1.05rem);
+    font-weight: 500;
+  }
+  .a360p-who span { color: #3e5568 !important; font-size: 0.78rem; }
+  .a360p-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.1rem; margin-top: 0.75rem; }
+  .a360p-cta {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.7rem;
+    padding: 0 1.05rem !important;
+    background: #003060 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .a360p-cta:hover { background: #00a8b0 !important; color: #ffffff !important; }
+  .a360p-cta svg { width: 0.95rem; height: 0.95rem; }
+  .a360p-aside { color: #3e5568 !important; font-size: 0.75rem; }
+  .a360p-fill {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-top: 0.85rem;
+    padding: 0.75rem;
+    background: #e5f4f5;
+  }
+  .a360p-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    align-items: stretch;
+  }
+  .a360p .a360p-steps p {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0.7rem 0.75rem 0.8rem;
+    background: #ffffff;
+    border-top: 3px solid #00a8b0;
+    border-left: 0;
+    overflow: visible;
+  }
+  .a360p-fill strong {
+    display: block;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .a360p-fill span {
+    display: block;
+    margin-top: 0.35rem;
+    color: #3e5568 !important;
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+  .a360p p.a360p-note {
+    flex-shrink: 0;
+    margin: 0.15rem 0 0 !important;
+    padding: 0 !important;
+    border: 0;
+    background: transparent;
+    color: #3e5568 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+  .a360p-stage {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    background: #f3fbfb;
+    border-left: 1px solid #d3e6e8;
+  }
+  .a360p-stage-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.55rem 0.9rem 0;
+    color: #3e5568 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .a360p-replay {
+    border: 0 !important;
+    background: transparent !important;
+    color: #007e90 !important;
+    box-shadow: none !important;
+    min-height: 2.5rem;
+    padding: 0 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.68rem !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .a360p-replay:hover { color: #003060 !important; }
+  .a360p-dial-wrap { flex: 1; min-height: 0; display: grid; place-items: center; padding: 0 0.6rem; }
+  .a360p-dial { width: min(92%, 38cqw); height: auto; max-height: 100%; }
+  .a360p-ring { fill: none; stroke: #00a8b0; stroke-width: 1.2; transform-box: fill-box; transform-origin: center; opacity: 0; animation: a360p-ring 5.6s cubic-bezier(0.16, 0.7, 0.2, 1) infinite; }
+  .a360p-bar { transform-box: fill-box; transform-origin: center bottom; animation: a360p-eq 2.6s ease-in-out infinite; }
+  .a360p-trace { fill: none; stroke: #00a8b0; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: a360p-draw 7s ease-in-out infinite; }
+  .a360p-spark { display: block; width: 100%; height: 2.1rem; padding: 0 1rem; color: #9ec9ce; }
+  .a360p-meters {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0.2rem 0.95rem 0.85rem;
+    border-top: 1px solid #d3e6e8;
+  }
+  .a360p-meters dt {
+    color: #3e5568 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.64rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .a360p-meters dd {
+    margin: 0.08rem 0 0;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: clamp(1.15rem, 2cqw, 1.7rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+  @keyframes a360p-ring { 0% { transform: scale(0.62); opacity: 0.45; } 100% { transform: scale(1.18); opacity: 0; } }
+  @keyframes a360p-eq { 0%, 100% { transform: scaleY(0.42); } 50% { transform: scaleY(1); } }
+  @keyframes a360p-draw { 0% { stroke-dashoffset: 100; opacity: 0.3; } 20% { opacity: 1; } 68% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0.45; } }
+  @container (max-width: 760px) {
+    .a360p::before { display: none; }
+    .a360p-post { aspect-ratio: auto; grid-template-columns: 1fr; min-height: 0; }
+    .a360p-stage { border-left: 0; border-top: 1px solid #d3e6e8; min-height: 22rem; }
+    .a360p-dial { width: min(70%, 16rem); }
+    .a360p-steps { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .a360p-ring, .a360p-bar, .a360p-trace { animation: none !important; }
+    .a360p-ring { opacity: 0.25; }
+    .a360p-bar { transform: none; }
+    .a360p-trace { stroke-dashoffset: 0; opacity: 1; }
+  }
+</style>
+<article class="a360p-post" aria-label="Akoestiekscan, onafhankelijke partner voor professionals">
+  <div class="a360p-copy">
+    <div>
+      <div class="a360p-brand">
+        <svg class="a360p-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="a360p-sm-arc" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1ecad0" />
+              <stop offset="50%" stop-color="#00a8b0" />
+              <stop offset="100%" stop-color="#003060" />
+            </linearGradient>
+            <linearGradient id="a360p-sm-bar" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stop-color="#003060" />
+              <stop offset="100%" stop-color="#1ecad0" />
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="24" fill="none" stroke="url(#a360p-sm-arc)" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="122 30" transform="rotate(40 32 32)" />
+          <path d="M46 44.5l6.2 1.2-3.4-5.2z" fill="#003060" />
+          <g fill="url(#a360p-sm-bar)">
+            <rect x="20" y="28" width="3.2" height="14" rx="1.6" />
+            <rect x="26" y="22" width="3.2" height="20" rx="1.6" />
+            <rect x="32" y="18" width="3.2" height="24" rx="1.6" />
+            <rect x="38" y="22" width="3.2" height="20" rx="1.6" />
+            <rect x="44" y="27" width="3.2" height="15" rx="1.6" />
+          </g>
+        </svg>
+        <div>
+          <div class="a360p-word">Akoestiek<span>360</span></div>
+          <div class="a360p-tag">Van meting naar merkbaar betere akoestiek.</div>
+        </div>
+      </div>
+      <p class="a360p-kicker">Akoestiekscan</p>
+      <h1 class="a360p-title">
+        <em>Onafhankelijke</em>
+        <span>partner voor professionals.</span>
+      </h1>
+      <p class="a360p-deck">De scan meet nagalm, verstaanbaarheid en privacy. Jij houdt de klantrelatie — wij leveren meting, analyse en een rapport dat je kunt toelichten.</p>
+    </div>
+    <div class="a360p-lower">
+      <ol class="a360p-aud">
+        <li><span class="a360p-idx">01</span><span class="a360p-who"><strong>Kantoorinrichters</strong><span>Onderbouw je ontwerp</span></span></li>
+        <li><span class="a360p-idx">02</span><span class="a360p-who"><strong>Projectinrichters</strong><span>Inzetbaar per project</span></span></li>
+        <li><span class="a360p-idx">03</span><span class="a360p-who"><strong>AV-integrators</strong><span>Een ruimte die klopt</span></span></li>
+        <li><span class="a360p-idx">04</span><span class="a360p-who"><strong>Architecten</strong><span>Vooraf akoestiek geborgd</span></span></li>
+      </ol>
+      <div class="a360p-actions">
+        <a class="a360p-cta" href="https://akoestiekscan.nl">Plan een scan
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <p class="a360p-aside">Geen productbinding. Objectief gemeten.</p>
+      </div>
+      <div class="a360p-fill">
+        <div class="a360p-steps">
+          <p><strong>Meten</strong><span>Nagalm, spraak en privacy, op locatie.</span></p>
+          <p><strong>Analyseren</strong><span>Wat de cijfers betekenen voor de ruimte.</span></p>
+          <p><strong>Rapporteren</strong><span>Een rapport dat je kunt toelichten.</span></p>
+        </div>
+        <p class="a360p-note">Sappemeer · metingen in heel Nederland</p>
+      </div>
+    </div>
+  </div>
+  <div class="a360p-stage">
+    <div class="a360p-stage-bar">
+      <span>Live meting · boardroom</span>
+      <button type="button" class="a360p-replay" data-a360p-replay>Opnieuw meten</button>
+    </div>
+    <div class="a360p-dial-wrap">
+      <svg class="a360p-dial" viewBox="0 0 320 320" role="img" aria-label="Levende nagalmmeting">
+        <defs>
+          <linearGradient id="a360p-lg-arc" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1ecad0" />
+            <stop offset="48%" stop-color="#00a8b0" />
+            <stop offset="100%" stop-color="#003060" />
+          </linearGradient>
+          <linearGradient id="a360p-lg-bar" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#003060" />
+            <stop offset="100%" stop-color="#1ecad0" />
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="156" r="118" fill="none" stroke="#d7eef0" stroke-width="1" />
+        <circle cx="160" cy="156" r="86" fill="none" stroke="#d7eef0" stroke-width="1" />
+        <g>
+          <circle class="a360p-ring" cx="160" cy="156" r="108" />
+          <circle class="a360p-ring" cx="160" cy="156" r="108" style="animation-delay:1.4s" />
+          <circle class="a360p-ring" cx="160" cy="156" r="108" style="animation-delay:2.8s" />
+          <circle class="a360p-ring" cx="160" cy="156" r="108" style="animation-delay:4.2s" />
+        </g>
+        <circle cx="160" cy="156" r="108" fill="none" stroke="url(#a360p-lg-arc)" stroke-width="10" stroke-linecap="round" stroke-dasharray="540 140" transform="rotate(38 160 156)" />
+        <path d="M232 214l22 2.2-12.5-18z" fill="#003060" />
+        <g fill="url(#a360p-lg-bar)">
+          <rect class="a360p-bar" x="112" y="132" width="12" height="62" rx="6" />
+          <rect class="a360p-bar" x="132" y="108" width="12" height="86" rx="6" style="animation-delay:.2s" />
+          <rect class="a360p-bar" x="154" y="92" width="12" height="102" rx="6" style="animation-delay:.45s" />
+          <rect class="a360p-bar" x="176" y="108" width="12" height="86" rx="6" style="animation-delay:.15s" />
+          <rect class="a360p-bar" x="196" y="124" width="12" height="70" rx="6" style="animation-delay:.35s" />
+        </g>
+      </svg>
+    </div>
+    <svg class="a360p-spark" viewBox="0 0 480 56" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 48 H480" fill="none" stroke="currentColor" stroke-width="1" />
+      <path class="a360p-trace" pathLength="100" d="M8 46 C24 46 30 8 42 8 C56 8 64 34 86 24 C110 12 124 42 164 32 C206 20 230 44 300 40 C360 36 410 48 472 44" />
+    </svg>
+    <dl class="a360p-meters">
+      <div><dt>Nagalm</dt><dd data-a360p-value="0.62" data-a360p-digits="2" data-a360p-suffix=" s">0,62 s</dd></div>
+      <div><dt>STI</dt><dd data-a360p-value="0.71" data-a360p-digits="2" data-a360p-suffix="">0,71</dd></div>
+      <div><dt>Privacy</dt><dd>hoog</dd></div>
+    </dl>
+  </div>
+</article>
+<script>
+(function () {
+  var root = document.currentScript && document.currentScript.closest(".a360p");
+  if (!root || root.getAttribute("data-a360p-ready") === "1") return;
+  root.setAttribute("data-a360p-ready", "1");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function format(n, d) { return n.toFixed(d).replace(".", ","); }
+  var frames = [];
+  function stop() { frames.forEach(function (id) { cancelAnimationFrame(id); }); frames = []; }
+  function run() {
+    stop();
+    root.querySelectorAll("[data-a360p-value]").forEach(function (el) {
+      var target = parseFloat(el.getAttribute("data-a360p-value") || "0");
+      var digits = parseInt(el.getAttribute("data-a360p-digits") || "2", 10);
+      var suffix = el.getAttribute("data-a360p-suffix") || "";
+      if (reduced) { el.textContent = format(target, digits) + suffix; return; }
+      var start = performance.now();
+      function tick(now) {
+        var t = Math.min(1, (now - start) / 1400);
+        var eased = 1 - Math.pow(1 - t, 3);
+        var wobble = t < 1 ? 0 : Math.sin(now / 1100) * 0.008;
+        el.textContent = format(Math.max(0, target * eased + wobble), digits) + suffix;
+        if (t < 1) frames.push(requestAnimationFrame(tick));
+      }
+      el.textContent = format(0, digits) + suffix;
+      frames.push(requestAnimationFrame(tick));
+    });
+    root.querySelectorAll(".a360p-ring, .a360p-bar, .a360p-trace").forEach(function (node) {
+      node.style.animation = "none";
+      void node.offsetWidth;
+      node.style.animation = "";
+    });
+  }
+  var button = root.querySelector("[data-a360p-replay]");
+  if (button) button.addEventListener("click", run);
+  if (!reduced) run();
+})();
+</script>
+</div>

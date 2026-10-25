@@ -1,0 +1,213 @@
+<div class="a360m">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700&family=Oswald:wght@400;500&display=swap" />
+<style>
+  .a360m, .a360m *, .a360m *::before, .a360m *::after { box-sizing: border-box; }
+  .a360m { container-type: inline-size; width: 100%; color: #0a0a0a; font-family: Merriweather, Georgia, serif; line-height: 1.5; }
+  .a360m h2, .a360m h3, .a360m p, .a360m ul, .a360m li, .a360m figure { margin: 0; padding: 0; }
+  .a360m ul { list-style: none; }
+  .a360m a { color: #006878; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+  .a360m a:hover { color: #003060; }
+  .a360m-panel {
+    background: #fcfcfc;
+    border: 1px solid #cfe3e6;
+    padding: clamp(1.25rem, 3cqw, 2.5rem) clamp(1.15rem, 3.2cqw, 2.7rem) clamp(1.2rem, 2.6cqw, 2rem);
+  }
+  .a360m-kicker {
+    color: #006878 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .a360m-title {
+    max-width: 16em;
+    margin-top: 0.4rem;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: clamp(1.9rem, 4.2cqw, 3.15rem) !important;
+    letter-spacing: -0.02em;
+    line-height: 0.98 !important;
+  }
+  .a360m-title em { font-style: normal; font-weight: 500; color: #007e90 !important; }
+  .a360m-rule {
+    display: block;
+    width: min(36rem, 88%);
+    height: 2px;
+    margin: 1.05rem 0 1.15rem;
+    background: #00a8b0;
+    transform-origin: left center;
+    animation: a360m-draw 2.8s cubic-bezier(0.22, 0.61, 0.18, 1) both;
+  }
+  .a360m p.a360m-deck {
+    max-width: 46em;
+    margin: 0 !important;
+    color: #3e5568 !important;
+    font-size: clamp(0.92rem, 1.25cqw, 1.05rem) !important;
+    line-height: 1.6;
+  }
+  .a360m-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin-top: clamp(1.35rem, 2.8cqw, 2.1rem);
+  }
+  .a360m article {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1rem 1.05rem 1.05rem;
+    background: #ffffff;
+    border: 1px solid #d3e6e8;
+    border-top: 3px solid #00a8b0;
+  }
+  .a360m h3 {
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: clamp(1.15rem, 1.8cqw, 1.4rem) !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em;
+    line-height: 1.15 !important;
+  }
+  .a360m article p {
+    margin-top: 0.55rem !important;
+    color: #3e5568 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55;
+  }
+  .a360m-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.9rem;
+    margin-top: auto;
+    padding-top: 0.85rem;
+  }
+  .a360m-links a {
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .a360m-links a:hover { color: #007e90 !important; }
+  .a360m-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    margin-top: 1.15rem;
+    border-top: 1px solid #d3e6e8;
+  }
+  .a360m-index li { min-width: 0; border-bottom: 1px solid #d3e6e8; }
+  .a360m-index a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.12rem;
+    min-width: 0;
+    padding: 0.62rem 0;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .a360m-index a span {
+    color: #3e5568 !important;
+    font-family: Merriweather, Georgia, serif !important;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.35;
+    text-align: left;
+  }
+  .a360m-index a:hover { color: #007e90 !important; }
+  .a360m-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem 1.4rem;
+    margin-top: 1.15rem;
+  }
+  .a360m-close {
+    max-width: 28em;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: clamp(1.05rem, 1.6cqw, 1.28rem);
+    font-weight: 500;
+    line-height: 1.25;
+  }
+  .a360m-cta {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.7rem;
+    padding: 0 1.05rem !important;
+    background: #003060 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em;
+    text-decoration: none !important;
+    text-transform: uppercase;
+  }
+  .a360m-cta:hover { background: #00a8b0 !important; color: #ffffff !important; }
+  .a360m-cta svg { width: 0.95rem; height: 0.95rem; }
+  @keyframes a360m-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @container (max-width: 760px) {
+    .a360m-grid, .a360m-index { grid-template-columns: 1fr; }
+    .a360m-title { font-size: 2.15rem !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .a360m-rule { animation: none !important; }
+  }
+</style>
+<section class="a360m-panel" aria-label="Akoestisch advies, metingen en oplossingen van Akoestiek360">
+  <p class="a360m-kicker">Akoestisch advies</p>
+  <h2 class="a360m-title">Alles voor de juiste akoestiek. <em>Van meting tot inrichting.</em></h2>
+  <span class="a360m-rule" aria-hidden="true"></span>
+  <p class="a360m-deck">Akoestiek360 helpt bedrijven, organisaties en particulieren, en is de onafhankelijke partner van projectinrichters, architecten en AV-integrators. Naast de Akoestiekscan: akoestisch advies, geluidsmetingen volgens NEN- en ISO-normen, en akoestische oplossingen die passen bij de ruimte. Met ruim 25 jaar ervaring in AV en akoestiek.</p>
+  <div class="a360m-grid">
+    <article>
+      <h3>Akoestiek per branche</h3>
+      <p>Een kantoor vraagt rust, concentratie en spraakprivacy. Een klaslokaal vraagt spraakverstaanbaarheid. In de horeca mag het levendig zijn, zonder dat gesprekken verdwijnen in galm. In de zorg telt rust, in een woning comfort, in een sporthal of aula de verstaanbaarheid.</p>
+      <p class="a360m-links"><a href="https://akoestiek360.nl/branches/">Alle branches</a><a href="https://akoestiek360.nl/kantoor-en-projectinrichters/">Voor inrichters</a></p>
+    </article>
+    <article>
+      <h3>Geluidsoverlast en horecametingen</h3>
+      <p>Last van galm, een warmtepomp of geluid dat via wanden, plafonds of kieren weglekt? Wij meten nagalm, luchtgeluid en geluidslekkage. Voor horeca ook een meting voor de omgevingsvergunning, volgens NEN 5077. Bouwakoestische metingen toetsen we aan NEN- en ISO-normen.</p>
+      <p class="a360m-links"><a href="https://akoestiek360.nl/horeca/">Horeca</a><a href="https://akoestiek360.nl/nagalmmeting/">Nagalmmeting</a><a href="https://akoestiek360.nl/luchtgeluidsmeting/">Luchtgeluid</a><a href="https://akoestiek360.nl/geluidzaken/">Geluidzaken</a></p>
+    </article>
+    <article>
+      <h3>Marktconsultatie en aanbesteding</h3>
+      <p>Onafhankelijke expertise bij marktconsultaties, aanbestedingen en het Programma van Eisen. Voor akoestische oplossingen, belcellen en stiltewerkplekken: van het opstellen van het PvE tot het toetsen of een aanbieding echt aan de eisen voldoet.</p>
+      <p class="a360m-links"><a href="https://akoestiek360.nl/marktconsultatie-en-aanbesteding/">Naar aanbestedingen</a><a href="https://akoestiek360.nl/belcellen-en-meetingpods/">Belcellen</a></p>
+    </article>
+    <article>
+      <h3>Akoestische oplossingen</h3>
+      <p>Wand- en plafondpanelen, baffles, plafondeilanden, lattenwanden, bureauschermen, belcellen en maatwerk. Gekozen op absorptie, plaatsing, uitstraling en budget, zodat akoestiek en interieur samengaan.</p>
+      <p class="a360m-links"><a href="https://akoestiek360.nl/akoestische-oplossingen/">Bekijk de oplossingen</a></p>
+    </article>
+  </div>
+  <ul class="a360m-index">
+    <li><a href="https://akoestiek360.nl/kantoren/">Kantoren<span>Rust, concentratie en privacy</span></a></li>
+    <li><a href="https://akoestiek360.nl/klaslokalen/">Klaslokalen<span>Spraakverstaanbaarheid in de les</span></a></li>
+    <li><a href="https://akoestiek360.nl/horeca/">Horeca en vergunning<span>Beleving en NEN 5077</span></a></li>
+    <li><a href="https://akoestiek360.nl/zorginstellingen/">Zorg<span>Rust en goede communicatie</span></a></li>
+    <li><a href="https://akoestiek360.nl/woningen/">Woningen<span>Geluidsoverlast en comfort</span></a></li>
+    <li><a href="https://akoestiek360.nl/geluidzaken/bouw-metingen-iso-nen/">Bouwmetingen<span>ISO- en NEN-normen</span></a></li>
+  </ul>
+  <div class="a360m-foot">
+    <p class="a360m-close">Een akoestisch vraagstuk, van geluidsoverlast tot een compleet project?</p>
+    <a class="a360m-cta" href="https://akoestiek360.nl/contact/">Bespreek uw situatie
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+  </div>
+</section>
+</div>

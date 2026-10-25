@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akoestiek360 — uitleg</title>
+</head>
+<body style="margin:0;background:#fcfcfc">
+<!-- BEGIN SMARTBUILDER -->
+<div class="a360e">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;600&display=swap" />
+<style>
+  .a360e, .a360e *, .a360e *::before, .a360e *::after { box-sizing: border-box; }
+  .a360e {
+    container-type: inline-size;
+    width: 100%;
+    color: #0a0a0a;
+    font-family: Merriweather, Georgia, serif;
+    line-height: 1.5;
+  }
+  .a360e h2, .a360e p, .a360e ul, .a360e ol, .a360e li, .a360e figure { margin: 0; padding: 0; }
+  .a360e ul, .a360e ol { list-style: none; }
+  .a360e a { text-decoration: none; }
+  .a360e-panel {
+    background: #fcfcfc;
+    border: 1px solid #cfe3e6;
+    padding: clamp(1.25rem, 3cqw, 2.5rem) clamp(1.15rem, 3.2cqw, 2.7rem) clamp(1.15rem, 2.4cqw, 1.9rem);
+  }
+  .a360e-kicker {
+    color: #006878 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .a360e-title {
+    max-width: 14em;
+    margin-top: 0.4rem;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: clamp(1.9rem, 4.2cqw, 3.15rem) !important;
+    letter-spacing: -0.02em;
+    line-height: 0.98 !important;
+  }
+  .a360e-title em { font-style: normal; font-weight: 500; color: #007e90 !important; }
+  .a360e-rule {
+    display: block;
+    width: min(36rem, 88%);
+    height: 2px;
+    margin: 1.05rem 0 1.15rem;
+    background: #00a8b0;
+    transform-origin: left center;
+    animation: a360e-draw 2.8s cubic-bezier(0.22, 0.61, 0.18, 1) both;
+  }
+  .a360e p.a360e-deck {
+    max-width: 44em;
+    margin: 0 !important;
+    color: #3e5568 !important;
+    font-size: clamp(0.92rem, 1.25cqw, 1.05rem) !important;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  .a360e-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: clamp(1.2rem, 3cqw, 2.6rem);
+    margin-top: clamp(1.35rem, 2.8cqw, 2.1rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid #d3e6e8;
+  }
+  .a360e-label {
+    margin-bottom: 0.45rem;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .a360e p.a360e-lead {
+    margin: 0 0 0.35rem !important;
+    color: #3e5568 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.55;
+  }
+  .a360e-facts li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.15rem 0.75rem;
+    align-items: baseline;
+    padding: 0.48rem 0;
+    border-bottom: 1px solid #d3e6e8;
+  }
+  .a360e-idx {
+    color: #007e90 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+  .a360e-facts strong {
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.98rem;
+    font-weight: 500;
+  }
+  .a360e-facts span {
+    display: block;
+    margin-top: 0.12rem;
+    color: #3e5568 !important;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+  .a360e-side {
+    background: #f3fbfb;
+    padding: 1rem 1.05rem 1.1rem;
+  }
+  .a360e-steps li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.7rem;
+    align-items: start;
+    padding: 0.72rem 0;
+    border-top: 1px solid #d3e6e8;
+  }
+  .a360e-steps li:first-child { border-top: 0; padding-top: 0.15rem; }
+  .a360e-num {
+    display: grid;
+    place-items: center;
+    width: 1.65rem;
+    height: 1.65rem;
+    background: #003060;
+    color: #ffffff !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .a360e-steps strong {
+    display: block;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .a360e-steps span {
+    display: block;
+    margin-top: 0.18rem;
+    color: #3e5568 !important;
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+  .a360e-who {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.15rem;
+  }
+  .a360e-who article {
+    padding: 0.85rem 1rem 0.95rem;
+    background: #ffffff;
+    border: 1px solid #d3e6e8;
+    border-top: 3px solid #00a8b0;
+  }
+  .a360e-who strong {
+    display: block;
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.98rem;
+    font-weight: 500;
+  }
+  .a360e-who span {
+    display: block;
+    margin-top: 0.3rem;
+    color: #3e5568 !important;
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+  .a360e-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem 1.4rem;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #d3e6e8;
+  }
+  .a360e-close {
+    color: #003060 !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: clamp(1.05rem, 1.6cqw, 1.28rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+  .a360e-close span {
+    display: block;
+    margin-top: 0.15rem;
+    color: #3e5568 !important;
+    font-family: Merriweather, Georgia, serif !important;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  .a360e-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; }
+  .a360e-cta {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.7rem;
+    padding: 0 1.05rem !important;
+    background: #003060 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: Oswald, "Arial Narrow", sans-serif !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .a360e-cta:hover { background: #00a8b0 !important; color: #ffffff !important; }
+  .a360e-cta svg { width: 0.95rem; height: 0.95rem; }
+  .a360e-aside { color: #3e5568 !important; font-size: 0.78rem; }
+  .a360e-aside a { color: #006878 !important; text-decoration: underline; }
+  @keyframes a360e-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @container (max-width: 760px) {
+    .a360e-grid, .a360e-who { grid-template-columns: 1fr; }
+    .a360e-title { font-size: 2.15rem !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .a360e-rule { animation: none !important; }
+  }
+</style>
+<section class="a360e-panel" aria-label="Wat Akoestiek360 doet">
+  <p class="a360e-kicker">Akoestiek360</p>
+  <h2 class="a360e-title">Eerst inzicht. <em>Dan de juiste oplossing.</em></h2>
+  <span class="a360e-rule" aria-hidden="true"></span>
+  <p class="a360e-deck">Een ruimte kan er prachtig uitzien, maar toch niet prettig klinken. Hinderlijke nagalm, gesprekken die moeilijk te verstaan zijn, of geluid dat ongewenst doordringt vanuit de ruimte ernaast. De Akoestiek360 Scan meet, analyseert en vertaalt dat naar een helder rapport met gericht advies.</p>
+  <div class="a360e-grid">
+    <div>
+      <p class="a360e-label">Wat de scan in beeld brengt</p>
+      <p class="a360e-lead">De naam 360 staat voor het totaalbeeld. Niet alleen hoe geluid zich in een ruimte gedraagt, ook hoe het tussen ruimtes overgaat.</p>
+      <ul class="a360e-facts">
+        <li><span class="a360e-idx">01</span><span><strong>Nagalm</strong><span>Blijft geluid te lang in de ruimte hangen?</span></span></li>
+        <li><span class="a360e-idx">02</span><span><strong>Spraakverstaanbaarheid</strong><span>Zijn gesprekken en presentaties goed te volgen?</span></span></li>
+        <li><span class="a360e-idx">03</span><span><strong>Geluidslekkages</strong><span>Waar dringt geluid ongewenst door?</span></span></li>
+        <li><span class="a360e-idx">04</span><span><strong>Luchtgeluidisolatie</strong><span>In hoeverre houden wanden geluid tegen?</span></span></li>
+      </ul>
+    </div>
+    <div class="a360e-side">
+      <p class="a360e-label">Van meten naar verbeteren</p>
+      <ol class="a360e-steps">
+        <li><span class="a360e-num">1</span><span><strong>Scannen</strong><span>De relevante eigenschappen in kaart, met klasse 1-apparatuur en een akoestische camera.</span></span></li>
+        <li><span class="a360e-num">2</span><span><strong>Analyseren</strong><span>Welke problemen spelen, waar de oorzaak ligt en welke verbetering nodig is.</span></span></li>
+        <li><span class="a360e-num">3</span><span><strong>Adviseren</strong><span>Een rapport met concrete aanbevelingen. Geen maatregelen die het probleem niet oplossen.</span></span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="a360e-who">
+    <article>
+      <strong>Voor eindgebruikers</strong>
+      <span>Duidelijkheid over de oorzaak van geluidsproblemen en wat je eraan kunt doen.</span>
+    </article>
+    <article>
+      <strong>Voor professionals</strong>
+      <span>Voor kantoor- en projectinrichters: meetresultaten waarmee je ontwerp en advies naar de opdrachtgever toelicht.</span>
+    </article>
+  </div>
+  <div class="a360e-foot">
+    <p class="a360e-close">Weet wat er speelt. Kies wat werkt.<span>Akoestiek360 — het totaalbeeld van akoestiek.</span></p>
+    <div class="a360e-actions">
+      <a class="a360e-cta" href="https://akoestiek360.nl/contact/">Neem contact op
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <p class="a360e-aside">Of plan direct via <a href="https://akoestiekscan.nl">akoestiekscan.nl</a></p>
+    </div>
+  </div>
+</section>
+</div>
+<!-- END SMARTBUILDER -->
+</body>
+</html>
